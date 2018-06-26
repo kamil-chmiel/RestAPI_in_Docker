@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adamik-Chmiel - Projekt SI</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}">
+</head>
+
+<body>
+
+<p><strong>Adamik-Chmiel Projekt SI</strong></p>
+<header class="navbar">
+  <form action="/upload" method="post" enctype="multipart/form-data" >
+      <span class="btn btn-default btn-file">
+        Browse: <input type="file" name="image">
+      </span>
+
+    <input type="submit" value="Upload your image" class="btn btn-primary">
+  </form>
+    <br/>
+  <form action="/train" enctype="multipart/form-data" >
+
+      Restore: <input type="submit" name="org" value="Original Model" ><br/><br/>
+      Fine-Tune: <input type="submit" name="catdog" value="Classyfing cats&dogs" >
+
+  </form>
+
+</header>
+
+</body>
+</html>
